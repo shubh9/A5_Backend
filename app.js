@@ -10,7 +10,7 @@ var receipesRouter = require("./routes/recipes");
 
 var app = express();
 
-// app.use(cors());
+app.use(cors());
 // const corsOptions ={
 //    origin:'*', 
 //    credentials:true,            //access-control-allow-credentials:true
