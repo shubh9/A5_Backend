@@ -17,7 +17,7 @@ var app = express();
 //    optionSuccessStatus:200,
 // }
 
-app.use(cors(corsOptions)) // Use this after the variable declaration
+// app.use(cors(corsOptions)) // Use this after the variable declaration
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
