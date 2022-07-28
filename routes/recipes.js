@@ -7,11 +7,21 @@ const Recipe = require("../database/model");
 const mongoose = require("mongoose");
 
 
+// router.get("/", function (req, res, next) {
+//   res.send('success')
+// });
+
+/* GET users listing. */
 router.get("/", function (req, res, next) {
-  res.send('success')
+  const getRecipes = async () => {
+    await mongoose.connect("mongodb+srv://hi:bye@cluster0.3psn9.mongodb.net/test");
+    var receipeList = await queries.getAllRecipes({});
+    res.send(receipeList);
+  };
+  getRecipes();
 });
 
-// /* GET users listing. */
+/* GET users listing. */
 // router.get("/", function (req, res, next) {
 //   console.log("print")
 //   const getRecipes = async () => {
